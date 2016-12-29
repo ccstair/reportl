@@ -4,7 +4,7 @@ const classController = {
   getClassById({ params: { course_id } }, res) {
     Class.forge({ course_id })
       .fetch({
-        withRelated: ['course'],
+        withRelated: ['course', 'modules'],
       })
       .then((clas) => {
         console.log(JSON.stringify(clas));
@@ -27,6 +27,18 @@ const classController = {
         res.sendStatus(500);
       });
   },
+
+  getAll(req, res) {
+    Class.fetchAll({
+      withRelated: ['course'],
+    })
+    .then(classes => res.json(classes))
+    .catch((err) => {
+      console.log(`classController.getAll - Error: ${err}`);
+      res.sendStatus(500);
+    });
+  },
+
 };
 
 module.exports = classController;

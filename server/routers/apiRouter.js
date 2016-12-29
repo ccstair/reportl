@@ -5,6 +5,7 @@ const studentRouter = require('./studentRouter');
 const teacherRouter = require('./teacherRouter');
 const classRouter = require('./classRouter');
 const courseRouter = require('./courseRouter');
+const moduleRouter = require('./moduleRouter');
 
 router.all('*', (req, res, next) => {
   console.log('apiRouter');
@@ -48,5 +49,10 @@ router.use('/courses', (req, res, next) => {
   console.log('apiRouter -> courseRouter');
   next();
 }, courseRouter);
+
+router.use('/modules', (req, res, next) => {
+  console.log('apiRouter -> moduleRouter');
+  next();
+}, moduleRouter);
 
 module.exports = router;

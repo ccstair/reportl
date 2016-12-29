@@ -2,7 +2,6 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { updateClass } from '../../actions/index';
-import { classId } from '../../components/render_class_builder';
 
 const AnnouncementsForm = ({ handleSubmit }) => (
   <div>
@@ -31,10 +30,9 @@ function mapStateToProps(state) {
   };
 }
 
-
 const AnnouncementsMakerForm = reduxForm({
   form: 'addClassAsset',
   onSubmit: updateClass,
-})(AnnouncementsForm);
+}, mapStateToProps)(AnnouncementsForm);
 
-export default connect(mapStateToProps)(AnnouncementsMakerForm);
+export default AnnouncementsMakerForm;
