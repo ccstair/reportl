@@ -1,6 +1,6 @@
 const db = require('../database/db');
 const Course = require('./courseModel');
-const Module = require('./moduleModel');
+require('./moduleModel');
 
 const Class = db.Model.extend({
   tableName: 'classes',
@@ -9,8 +9,8 @@ const Class = db.Model.extend({
     return this.belongsTo(Course, 'id');
   },
   modules() {
-    return this.hasMany(Module, 'classes_id');
+    return this.hasMany('Module', 'classes_id');
   },
 });
 
-module.exports = Class;
+module.exports = db.model('Class', Class);
