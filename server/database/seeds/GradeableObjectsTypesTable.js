@@ -24,5 +24,5 @@ exports.seed = (knex, Promise) => {
   ];
 
   return knex(tableName).del()
-    .then(() => Promise.all(data.map(gradeableObject => knex(tableName).insert(gradeableObject))));
+    .then(() => Promise.all(data.map(type => knex(tableName).insert(type))));
 };

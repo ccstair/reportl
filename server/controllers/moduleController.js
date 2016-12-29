@@ -19,11 +19,7 @@ const moduleController = {
   },
 
   getAll(req, res) {
-    Module.fetchAll(
-      {
-        withRelated: ['classes'],
-      }
-  )
+    Module.fetchAll({ withRelated: ['classes', 'gradeableobjects'] })
     .then(modules => res.json(modules))
     .catch((err) => {
       console.log(`moduleController.getAll - Error: ${err}`);

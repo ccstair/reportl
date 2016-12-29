@@ -6,6 +6,7 @@ const teacherRouter = require('./teacherRouter');
 const classRouter = require('./classRouter');
 const courseRouter = require('./courseRouter');
 const moduleRouter = require('./moduleRouter');
+const gradeableobjectsRouter = require('./gradeableobjectsRouter');
 
 router.all('*', (req, res, next) => {
   console.log('apiRouter');
@@ -54,5 +55,10 @@ router.use('/modules', (req, res, next) => {
   console.log('apiRouter -> moduleRouter');
   next();
 }, moduleRouter);
+
+router.use('/gradeableobjects', (req, res, next) => {
+  console.log('apiRouter -> gradeableobjectsRouter');
+  next();
+}, gradeableobjectsRouter);
 
 module.exports = router;

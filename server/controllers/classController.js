@@ -30,7 +30,7 @@ const classController = {
 
   getAll(req, res) {
     Class.fetchAll({
-      withRelated: ['course'],
+      withRelated: ['course', 'modules'],
     })
     .then(classes => res.json(classes))
     .catch((err) => {

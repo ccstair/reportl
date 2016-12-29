@@ -5,7 +5,7 @@ const GradeableObjectType = db.Model.extend({
   tableName: 'gradeable_objects_types',
   hasTimestamps: true,
   gradeableobjects() {
-    return this.hasMany('GradeableObjects', 'type_id');
+    return this.hasMany('GradeableObjectModel', 'type_id');
   },
 });
 

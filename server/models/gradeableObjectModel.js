@@ -1,15 +1,16 @@
 const db = require('../database/db');
-const Module = require('./classModel');
+require('./gradeableObjectModelType');
+require('./moduleModel');
 
 const GradeableObjectModel = db.Model.extend({
   tableName: 'gradeable_objects',
-  hasTimestamps: true,
+  hasTimestamps: false,
   module() {
-    return this.belongsTo(Module, 'module_id');
+    return this.belongsTo('Module', 'module_id');
   },
   type() {
     return this.belongsTo('GradeableObjectType', 'type_id');
   },
 });
 
-module.exports = GradeableObjectModel;
+module.exports = db.model('GradeableObjectModel', GradeableObjectModel);
