@@ -19,6 +19,7 @@ import UploadFile from './post_file_reducer';
 import GetGradeData from './grade_data_reducer';
 import GetAttendees from './get_attendees_reducer';
 import DepartmentForm from './addDepartment_reducer';
+import CalendarData from './add_calendar_reducer'
 
 const rootReducer = combineReducers({
   user: LoginReducer,
@@ -39,6 +40,7 @@ const rootReducer = combineReducers({
   gradeData: GetGradeData,
   attendees: GetAttendees,
   addDepartment: DepartmentForm,
+  calendarData: CalendarData,
 });
 
 const logger = createLogger();

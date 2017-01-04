@@ -158,3 +158,11 @@ export function createDepartment(department) {
     payload: request,
   };
 }
+
+export function getAllCalendarEvents() {
+  const request = axios.get('api/calendar');
+  return {
+    type: 'GET_CALENDAR',
+    payload: request,
+  };
+}

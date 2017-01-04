@@ -15,6 +15,7 @@ import RenderClasses from './components/render_classes';
 import RenderDepartments from './components/render_departments';
 import RenderGradeGraph from './components/render_grade_graph';
 import DepartmentForm from './containers/addDepartment';
+import RenderCalendar from './components/render_calendar';
 
 ReactDOM.render(
 
@@ -31,6 +32,7 @@ ReactDOM.render(
         <Route path="/department" component={RenderDepartments} />
         <Route path="/gradegraph" component={RenderGradeGraph} />
         <Route path="/createDepartment" component={DepartmentForm} />
+        <Route path="/calendar" component={RenderCalendar} />
       </Route>
     </Router>
   </Provider>
