@@ -15,10 +15,12 @@ import RenderClasses from './components/render_classes';
 import RenderDepartments from './components/render_departments';
 import RenderGradeGraph from './components/render_grade_graph';
 import DepartmentForm from './containers/addDepartment';
-import RenderClassesforCourse from './components/render_courses';
 import CourseForm from './containers/addCourse';
 import RenderAttendees from './components/attendance_student';
 import RenderCalendar from './components/render_calendar';
+import RenderCourseCatalog from './components/render_course_catalog';
+import RenderClassesforCourse from './components/render_courses';
+import RenderSingleClass from './components/render_single_class';
 
 ReactDOM.render(
 
@@ -32,13 +34,16 @@ ReactDOM.render(
         <Route path="/users" component={RenderUsers} />
         <Route path="/updateprofile" component={UpdateProfile} />
         <Route path="/profile" component={RenderProfile} />
-        <Route path="/department" component={RenderDepartments} />
         <Route path="/gradegraph" component={RenderGradeGraph} />
         <Route path="/createDepartment" component={DepartmentForm} />
         <Route path="/course" component={RenderClassesforCourse} />
         <Route path="/createCourse" component={CourseForm} />
         <Route path="/attendance" component={RenderAttendees} />
         <Route path="/calendar" component={RenderCalendar} />
+        <Route path="/coursecatalog" component={RenderCourseCatalog} />
+        <Route path="/coursecatalog/department" component={RenderDepartments} />
+        <Route path="/coursecatalog/department/course" component={RenderClassesforCourse} />
+        <Route path="/coursecatalog/department/course/class" component={RenderSingleClass} />
       </Route>
     </Router>
   </Provider>
