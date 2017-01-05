@@ -21,6 +21,7 @@ import RenderCalendar from './components/render_calendar';
 import RenderCourseCatalog from './components/render_course_catalog';
 import RenderClassesforCourse from './components/render_courses';
 import RenderSingleClass from './components/render_single_class';
+import SearchCalendar from './containers/getCalendarDays';
 
 const isAuth = () => !!store.getState().user.id;
 
@@ -70,6 +71,7 @@ ReactDOM.render(
         <Route path="/createCourse" component={CourseForm} />
         <Route path="/attendance" component={RenderAttendees} />
         <Route path="/calendar" component={RenderCalendar} />
+        <Route path="/calendar/search" component={SearchCalendar} />
         <Route path="/coursecatalog" component={RenderCourseCatalog} />
         <Route path="/coursecatalog/department" component={RenderDepartments} />
         <Route path="/coursecatalog/department/course" component={RenderClassesforCourse} />
