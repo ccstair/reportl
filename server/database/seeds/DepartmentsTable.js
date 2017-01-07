@@ -22,5 +22,6 @@ exports.seed = (knex, Promise) => {
   return knex.raw('SET foreign_key_checks = 0;')
     .then(() => knex(tableName).del())
     .then(() => Promise.all(data.map(type => knex(tableName).insert(type))))
+    .then(() => Promise.all())
     .finally(() => knex.raw('SET foreign_key_checks = 1;'));
 };

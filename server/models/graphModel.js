@@ -26,6 +26,9 @@ const GraphModel = db.Model.extend({
   users() {
     return this.belongsTo('User', 'student_id');
   },
+  teacher() {
+    return this.belongsTo('User', 'teacher_id');
+  },
 });
 
 module.exports = db.model('GraphModel', GraphModel);
