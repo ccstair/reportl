@@ -15,7 +15,7 @@ const SchoolNav = ({ user }) => {
     <div style={container}>
       {isAuth() && <Link to="/directory"><button style={subNavButton}>Directory</button></Link>}
       {isAuthType('student', 'teacher') && <Link to="/coursecatalog/department/"><button style={subNavButton}>Course Catalog</button></Link>}
-      {isAuthType('teacher') && <Link to="/gradegraph"><button style={subNavButton}>Grades</button></Link>}
+      {isAuthType('teacher') && <Link to="/analytics"><button style={subNavButton}>Analytics</button></Link>}
       {isAuthType('teacher', 'student') && <Link to="/calendar"><button style={subNavButton}>Calendar</button></Link>}
     </div>
   );
