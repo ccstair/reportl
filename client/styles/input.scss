@@ -1,0 +1,33 @@
+*{
+  font-family: Helvetica;
+}
+
+.pageTitle{
+  font-size: 40px;
+  text-align: center;
+}
+
+.courseCatalogButton{
+  background-color: lightblue;
+  width: 250px;
+  height: 75px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 15px
+}
+.courseDetails{
+  text-align: left;
+}
+
+.courseCatalogHeaders{
+  font-size: 25px;
+  text-align: center;
+  padding: 5px;
+}
+
+.classSection{
+  border: 1px;
+  background-color: lightgrey;
+  padding: 15px;
+}
