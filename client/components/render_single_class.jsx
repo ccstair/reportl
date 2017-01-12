@@ -20,10 +20,10 @@ class RenderSingleClass extends Component {
           <div className="classSection">
             <div>{classInfo.modules.map(module => (
               <div>
-                <div>{module.moduleName}</div>
-                <div>{module.percentOfClassGrade}</div>
-                <div>{module.startDate}</div>
-                <div>{module.endDate}</div>
+                <div>Module Name: {module.moduleName}</div>
+                <div>Percent of Class Grade: {module.percentOfClassGrade}</div>
+                <div>Start Date: {module.startDate.slice(5, 10)}</div>
+                <div>End Date: {module.endDate.slice(5, 10)}</div>
               </div>
             ))}</div>
           </div>
@@ -32,12 +32,12 @@ class RenderSingleClass extends Component {
             <div>{classInfo.users.map(user => (
               <div>
                 <div>{user.imgUrl}</div>
-                <div>{user.fullName}</div>
-                <div>{user.description}</div>
-                <div>{user.dateOfBirth}</div>
-                <div>{user.email}</div>
-                <div>{user.phoneNumber}</div>
-                <div>{user.address}</div>
+                <div>Student Name: {user.fullName}</div>
+                <div>Student Description: {user.description}</div>
+                <div>Student Date of Birth: {user.dateOfBirth}</div>
+                <div>Student Email: {user.email}</div>
+                <div>Student Phone Number: {user.phoneNumber}</div>
+                <div>Student Phone Address: {user.address}</div>
               </div>
             ))}</div>
           </div>

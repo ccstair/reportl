@@ -7,7 +7,7 @@ class RenderClassesforCourse extends Component {
   renderCourses() {
     if (this.props.course.classes) {
       return (
-        <li className="courseCatalogHeaders courseDetails">Name: {this.props.course.name}
+        <div className="courseCatalogHeaders courseDetails">Name: {this.props.course.name}
           <div>{this.props.course.description}</div>
           <div>{this.props.course.classes.map(eachClass => (
             <Link to="/coursecatalog/department/course/class"><button
@@ -20,7 +20,7 @@ class RenderClassesforCourse extends Component {
                Class ID: {eachClass.id}
             </button></Link>
           ))}</div>
-        </li>
+        </div>
       );
     }
     return <p>Loading</p>;
@@ -30,9 +30,7 @@ class RenderClassesforCourse extends Component {
     return (
       <div>
         <h3 className="pageTitle">Course Details</h3>
-        <ol>
-          {this.renderCourses()}
-        </ol>
+        {this.renderCourses()}
       </div>
     );
   }
