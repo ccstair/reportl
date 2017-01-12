@@ -21,8 +21,8 @@ class userAnalyticsDashboard extends Component {
     return (
       <div>
         <h2>Grades for {this.props.selectedUserGraph} in {this.props.selectedClassGraph}</h2>
-        <div>
-          <p>Select User</p>
+        <p>Select User</p>
+        <div className="graphButtonsContainer graphUserButtonsContainer">
           {users.map(user => (
             <button
               className="graphClassButtons graphUserButtons"
@@ -32,7 +32,7 @@ class userAnalyticsDashboard extends Component {
             </button>))}
         </div>
         <p>Select Class</p>
-        <div>
+        <div className="graphButtonsContainer">
           {classes.map(classItem => (
             <button
               className="graphClassButtons"

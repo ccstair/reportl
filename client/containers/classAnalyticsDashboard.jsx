@@ -20,7 +20,7 @@ class classAnalyticsDashboard extends Component {
       <div>
         <h2 className="pageTitle">Grades for {this.props.selectedClassGraph}</h2>
         <p>Select Class</p>
-        <div>
+        <div className="graphButtonsContainer">
           {classes.map(classItem => (
             <button
               className="graphClassButtons"

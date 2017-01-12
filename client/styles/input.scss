@@ -1,3 +1,6 @@
+
+@import 'reactable';
+
 .defaultContainer {
   margin-left: 10%;
   margin-right: 10%;
@@ -64,10 +67,21 @@
   justify-content: center;
 }
 
+.graphButtonsContainer{
+  border-width: 4px;
+  border-color: #288ad6;
+  border-style: solid;
+  padding: 5px;
+}
+
+.graphUserButtonsContainer{
+  border-color: #0FDEBD;
+}
+
 .graphClassButtons{
   background-color: #288ad6;
   width: 80px;
-  height: 50px;
+  height: 60px;
   font-size: 12px;
   color: white;
   justify-content: center;
