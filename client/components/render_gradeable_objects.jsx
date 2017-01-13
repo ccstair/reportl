@@ -18,9 +18,8 @@ class RenderGradeables extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Assignments/Exams</h3>
-        {this.renderGradeables()}
+      <div className="assignment">
+        <div>Assignments/Exams: {this.renderGradeables()}</div>
       </div>
     );
   }

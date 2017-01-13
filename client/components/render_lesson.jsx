@@ -6,9 +6,9 @@ import Presentation from './render_presentation';
 const RenderLesson = () => (
   <div>
     <h2 className="pageTitle">Lesson</h2>
-    <Attendance />
     <Presentation />
     <Assignments />
+    <Attendance />
   </div>
 );
 

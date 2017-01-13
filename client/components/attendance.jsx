@@ -6,6 +6,7 @@ import { getAllAttendees, markPresent, markAbsent } from '../actions/index';
 const containerStyle = {
   display: 'flex',
   flexWrap: 'wrap',
+  margin: '0 225px',
 };
 
 const greenCardStyle = {
