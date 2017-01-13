@@ -1,22 +1,18 @@
-.presentation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-};
-
-.assignment {
+.profileCard {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   display: block;
   border: none;
   background-color: $light;
-  height: 100px;
-  width: 595px;
+  height: 420px;
+  width: 600px;
   margin: 20px auto;
   box-shadow: 10px 10px 5px lightgrey;
   font-size: large;
-  background-color: $quaternary-color;
-  color: $light;
   text-align: center;
+}
+
+.profileImage {
+  margin: 30px auto;
 }

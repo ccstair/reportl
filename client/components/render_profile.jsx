@@ -9,14 +9,11 @@ class RenderProfile extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Profile</h2>
-        <img alt="Profile Pic" src={`/api/files/${this.props.profile.profilePhotoId}`} />
-        <ul>
-          <li>{this.props.profile.fullName}</li>
-          <li>{this.props.profile.email}</li>
-          <li>{this.props.profile.address}</li>
-        </ul>
+      <div className="profileCard">
+        <img className="profileImage" alt="Profile Pic" src={`/api/files/${this.props.profile.profilePhotoId}`} />
+        <p>{this.props.profile.fullName}</p>
+        <p>{this.props.profile.email}</p>
+        <p>{this.props.profile.address}</p>
       </div>
     );
   }
