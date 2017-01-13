@@ -28,6 +28,7 @@ import RenderUserTable from './containers/render_user_table';
 import Directory from './containers/directory';
 import RenderAnalytics from './components/render_analytics';
 import RenderSetupForm from './containers/setup_school_forms/render_setup_form';
+import Homepage from './components/homepage';
 
 const isAuth = () => !!store.getState().user.id;
 
@@ -55,7 +56,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={LoginField} />
+        <IndexRoute component={Homepage} />
+        <Route path="/login" component={LoginField} />
         <Route path="/class" component={RenderClassBuilder} />
         <Route path="/user" component={UserForm} />
         <Route path="/classes" component={RenderClasses} />
