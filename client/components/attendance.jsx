@@ -66,7 +66,8 @@ class RenderAttendees extends Component {
           } else {
             console.log('absent!');
             markAbsent(eachAttendee.id);
-            const newPresent = this.state.present.slice().splice(presentIndex, 1);
+            this.state.present.splice(presentIndex, 1);
+            const newPresent = this.state.present.slice();
             console.log('newPresent', newPresent);
             this.setState({ present: newPresent });
           }
