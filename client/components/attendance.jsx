@@ -79,7 +79,7 @@ class RenderAttendees extends Component {
         <img
           style={thumbnailStyle}
           alt="Attendee"
-          src={(eachAttendee.user.profilePhotoId && `http://localhost:8000/api/files/${eachAttendee.user.profilePhotoId}`) || blankUrl}
+          src={(eachAttendee.user.profilePhotoId && `/api/files/${eachAttendee.user.profilePhotoId}`) || blankUrl}
         />
         {/* <img alt="Attendee" src={eachAttendee.user.imgUrl} />   */}
         <div>{eachAttendee.user.fullName}</div>
