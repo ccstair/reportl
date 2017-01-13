@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { hashHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { getAllCalendarEvents, getMeetingById, getAllAttendees } from '../actions/index';
 
@@ -48,17 +48,20 @@ class RenderCalendar extends Component {
         <div className="calDate">{`${eachDay.month} ${eachDay.dayOfMonth}`}</div>
         {eachDay.meetings.map(meeting => (
           <div key={meeting.id}>
-            <Link to="/lesson">
-              <button
-                className="calMeeting"
-                onClick={() => {
-                  this.props.getMeetingById(meeting.id);
-                  this.props.getAllAttendees(meeting.id);
-                }}
-              >
-              Meeting: {`classId: ${meeting.classId}, start: ${meeting.startTime}, end: ${meeting.endTime}`}
-              </button>
-            </Link>
+            <button
+              className="calMeeting"
+              onClick={() => {
+                this.props.getMeetingById(meeting.id);
+                this.props.getAllAttendees(meeting.id);
+                hashHistory.push('/lesson');
+              }}
+            >
+              {meeting.class.name}
+              <br />
+              {meeting.startTime}
+              <br />
+              {meeting.endTime}
+            </button>
           </div>
         ))}
       </div>
